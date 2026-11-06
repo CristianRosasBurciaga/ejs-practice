@@ -8,8 +8,22 @@
 <body>
     <h1>EJS Practice</h1>
     <h2>Hello, <%= person.name %> </h2>
-    <h3>Occupation: <%= person.occupation %></h3>
-    <h3>Favorite Color: <%= person.favColor %></h3>
+    <h3>Occupation:  <%= person.occupation %>
+        <% if (['plumber', 'organist', 'bagpiper'].includes(person.occupation.toLowerCase())) { %>
+        <p>You work with pipes!</p>
+    <% } else { %>
+        <p>That's an interesting job!</p>
+    <% } %></h3>
+    <h3>Favorite Color: <%= person.favColor %>
+    <% if (person.favColor === 'blue') { %>
+        <p>That is my favorite color too!</p>
+    <% } else if(person.favColor === 'red') { %>
+        <p>Awww man :(</p>
+    <% } else if(person.favColor === 'green'){ %>
+        <p>That is a pretty cool color</p>
+    <% } else { %>
+        <p>NICE!</p>
+        <% } %></h3>
     
 </body>
 </html>

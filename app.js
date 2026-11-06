@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
 
     //render home when at the default root
-    const person = {name: 'Donald Duck', occupation: "plumber", favColor: "blue"}
+    const person = {name: 'Donald Duck', occupation: "bagpiper", favColor: "blue"}
     res.render('home', {person});
 
 });
