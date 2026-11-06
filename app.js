@@ -19,8 +19,20 @@ app.get('/', (req, res) => {
     //render home when at the default root
     const person = {name: 'Donald Duck', occupation: "bagpiper", favColor: "blue"}
     res.render('home', {person});
-
 });
+
+// Defining route to friends ejs
+app.get('/friends', (req, res) => {
+    const friends = [ 'Mickey', 'Goofy', 'Minnie', 'Daisy' ];
+
+    res.render('friends', { friends });
+});
+
+app.get('/fav-movies', (req, res) => {
+    const movies = [ 'Avengers: Endgame', 'Avengers: Infinity War', 'Gladiator', 'The Lion King', 'Fast Five', 'Avatar Fire and Ash', 'Toy Story 3', 'Real Steel'];
+
+    res.render('fav-movies', { movies });
+})
 
 //Start server on the designated PORT
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
