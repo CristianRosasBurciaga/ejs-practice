@@ -6,7 +6,7 @@
     <title>EJS Practice</title>
 </head>
 <body>
-    <h1>EJS Practice</h1>
+    <%- include('partials/header') %>
     <h2>Hello, <%= person.name %> </h2>
     <h3>Occupation:  <%= person.occupation %>
         <% if (['plumber', 'organist', 'bagpiper'].includes(person.occupation.toLowerCase())) { %>
@@ -25,5 +25,6 @@
         <p>NICE!</p>
         <% } %></h3>
     
+    <%- include('partials/footer') %>
 </body>
 </html>

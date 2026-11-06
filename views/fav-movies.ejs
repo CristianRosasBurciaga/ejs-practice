@@ -6,11 +6,13 @@
     <title>Favorite Movies</title>
 </head>
 <body>
-    <h1>Your Favorite Movies:</h1>
+    <%- include('partials/header') %>
+    <h2>Your Favorite Movies:</h2>
     <ul>
         <% movies.forEach(movie=> { %>
             <li><%= movie %></li>
         <% }) %>
     </ul>
+    <%- include('partials/footer') %>
 </body>
 </html>
